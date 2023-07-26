@@ -25,7 +25,9 @@ require("lazy").setup({
 	
 	{ 'nvim-treesitter/nvim-treesitter' },
 	
-	{ 'neovim/nvim-lspconfig' },
+    { 'williamboman/mason.nvim', build = ':MasonUpdate' },
+    { 'williamboman/mason-lspconfig.nvim' },
+    { 'neovim/nvim-lspconfig' },
 
 	{ 'joshdick/onedark.vim' },
     { 'santos-gabriel-dario/darcula-solid.nvim' , dependencies = {'rktjmp/lush.nvim'}},
@@ -36,7 +38,6 @@ require("lazy").setup({
     { 'hrsh7th/cmp-cmdline' },
     { 'hrsh7th/nvim-cmp' },
 
-    { 'williamboman/mason.nvim', build = ':MasonUpdate' },
 
     { 'nvim-telescope/telescope.nvim', tag = '0.1.1', dependencies = {'nvim-lua/plenary.nvim'} },
 

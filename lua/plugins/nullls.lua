@@ -5,11 +5,11 @@ null_ls.setup({
     sources = {
         null_ls.builtins.code_actions.refactoring,
 
-
-        null_ls.builtins.diagnostics.pylint,
         null_ls.builtins.diagnostics.flake8,
         null_ls.builtins.formatting.autopep8,
-        null_ls.builtins.formatting.black,
+        null_ls.builtins.formatting.black.with { filetypes = {
+            'python'
+        }, args = {'--line-length', '79'} },
         null_ls.builtins.formatting.djhtml,
 
 
