@@ -39,7 +39,7 @@ require("lazy").setup({
     { 'hrsh7th/nvim-cmp' },
 
 
-    { 'nvim-telescope/telescope.nvim', tag = '0.1.1', dependencies = {'nvim-lua/plenary.nvim'} },
+    { 'nvim-telescope/telescope.nvim', tag = '0.1.2', dependencies = {'nvim-lua/plenary.nvim'} },
 
     { 'jose-elias-alvarez/null-ls.nvim' }, 
 
