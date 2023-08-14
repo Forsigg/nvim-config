@@ -67,5 +67,7 @@ require("lazy").setup({
     { 'akinsho/toggleterm.nvim', version = "*", config = true },
 
     {'MTDL9/vim-log-highlighting'},
+
+    {'roobert/f-string-toggle'},
 }
 })
