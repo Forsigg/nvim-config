@@ -65,5 +65,7 @@ require("lazy").setup({
     { "folke/which-key.nvim" },
 
     { 'akinsho/toggleterm.nvim', version = "*", config = true },
+
+    {'MTDL9/vim-log-highlighting'},
 }
 })
