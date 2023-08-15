@@ -6,6 +6,7 @@ require('core.configs')
 
 
 -- Plugins
+require('plugins.notify')
 require('plugins.neotree')
 require('plugins.treesitter')
 require('plugins.lsp')
@@ -23,3 +24,4 @@ require('plugins.whichkey')
 require('plugins.toggleterm')
 require('plugins.f-string-py')
 require('plugins.cursorline')
+require('plugins.autosession')

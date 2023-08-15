@@ -71,5 +71,9 @@ require("lazy").setup({
     {'roobert/f-string-toggle'},
 
     {'yamatsum/nvim-cursorline'},
+
+    {'rcarriga/nvim-notify'},
+
+    {'rmagatti/auto-session'}
 }
 })
