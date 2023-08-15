@@ -52,3 +52,4 @@
 -  "toggleterm.nvim"
 -  "vim-log-highlighting"
 -  "which-key.nvim"
+-  "virtcolumn.nvim"
