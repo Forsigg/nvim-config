@@ -74,6 +74,8 @@ require("lazy").setup({
 
     {'rcarriga/nvim-notify'},
 
-    {'rmagatti/auto-session'}
+    {'rmagatti/auto-session'},
+
+    {'xiyaowong/virtcolumn.nvim'}
 }
 })
