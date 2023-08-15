@@ -69,5 +69,7 @@ require("lazy").setup({
     {'MTDL9/vim-log-highlighting'},
 
     {'roobert/f-string-toggle'},
+
+    {'yamatsum/nvim-cursorline'},
 }
 })
