@@ -76,6 +76,7 @@ require("lazy").setup({
 
     {'rmagatti/auto-session'},
 
-    {'xiyaowong/virtcolumn.nvim'}
+    {'xiyaowong/virtcolumn.nvim'},
+
 }
 })

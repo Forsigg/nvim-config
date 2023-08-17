@@ -1,6 +1,18 @@
 -- Sntup language servers.
 local lspconfig = require('lspconfig')
-lspconfig.pyright.setup {}
+lspconfig.pyright.setup {
+    settings = {
+        python = {
+            analysis = {
+                autoSearchPaths = true,
+                autoImportCompletions = true,
+                diagnosticMode = 'openFilesOnly',
+                typeCheckingMode = 'basic',
+                useLibraryCodeForTypes = true,
+            }
+        }
+    }
+}
 lspconfig.tsserver.setup {}
 lspconfig.prismals.setup {}
 lspconfig.golangci_lint_ls.setup {}
