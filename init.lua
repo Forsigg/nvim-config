@@ -6,6 +6,7 @@ require('core.configs')
 
 
 -- Plugins
+require('plugins.neodev')
 require('plugins.notify')
 require('plugins.neotree')
 require('plugins.treesitter')
