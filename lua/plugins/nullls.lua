@@ -2,17 +2,20 @@ local null_ls = require("null-ls")
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 null_ls.setup({
+    log_level = 'info',
     sources = {
         null_ls.builtins.code_actions.gitsigns,
         null_ls.builtins.code_actions.refactoring.with {
             filetypes = { "go", "javascript", "lua", "python", "typescript" }
         },
 
-        null_ls.builtins.diagnostics.flake8,
+        null_ls.builtins.diagnostics.flake8.with ({
+            prefer_local = '.venv/bin',
+        }),
         null_ls.builtins.formatting.autopep8,
-        null_ls.builtins.formatting.black.with { filetypes = {
-            'python'
-        }, args = {'--line-length', '79'} },
+        null_ls.builtins.formatting.black.with { 
+            filetypes = {'python'},
+            args = {'--line-length', '120'} },
         null_ls.builtins.formatting.djhtml,
 
 

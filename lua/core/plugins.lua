@@ -98,7 +98,9 @@ require("lazy").setup({
     {'xiyaowong/virtcolumn.nvim'},
 
     -- Notify func signatutes
-    { "folke/neodev.nvim", config = true, lazy = true}
+    { "folke/neodev.nvim", config = true, lazy = true},
+
+    {'nvie/vim-flake8'},
 
 }
 })

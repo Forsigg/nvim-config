@@ -20,7 +20,7 @@ vim.opt.mousefocus = true
 -- Line Numbers
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt.colorcolumn = "79"
+vim.opt.colorcolumn = "120"
 
 -- Splits
 vim.opt.splitbelow = true
