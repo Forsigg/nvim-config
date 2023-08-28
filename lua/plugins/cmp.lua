@@ -14,14 +14,13 @@ cmp.setup({
         completion = cmp.config.window.bordered(),
         documentation = cmp.config.window.bordered()
     },
-    mapping = cmp.mapping.preset.insert({
-        ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-        ['<C-f>'] = cmp.mapping.scroll_docs(4),
-        ['<C-Space>'] = cmp.mapping.complete(),
-        ['<C-e>'] = cmp.mapping.abort(),
-        ['<CR>'] = cmp.mapping.confirm({select = true}),
-        ["<Tab>"] = cmp.mapping(function(fallback)
-            if cmp.visible() then
+    mapping = {
+        ['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), {'i'}),
+        ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), {'i'}),
+        ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), {'i'}),
+        ['<C-e>'] = cmp.mapping(cmp.mapping.abort(), {'i'}),
+        ['<CR>'] = cmp.mapping(cmp.mapping.confirm({select = true}), {'i'}),
+        ["<Tab>"] = cmp.mapping(function(fallback) if cmp.visible() then
                 cmp.select_next_item()
             else
                 fallback()
@@ -34,7 +33,7 @@ cmp.setup({
                 fallback()
             end
         end, {"i", "s"})
-    }),
+    },
     sources = cmp.config.sources({
         {name = 'nvim_lsp'}, {name = 'vsnip'} -- For vsnip users.
     }, {{name = 'buffer'}, {name = 'nvim_lsp_signature_help'}})
