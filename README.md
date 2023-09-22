@@ -53,3 +53,6 @@
 -  "vim-log-highlighting"
 -  "which-key.nvim"
 -  "virtcolumn.nvim"
+-  "format-on-save"
+-  "indent-blankline"
+-  "vim-flake8"
