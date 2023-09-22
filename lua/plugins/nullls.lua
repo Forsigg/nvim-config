@@ -19,6 +19,13 @@ null_ls.setup({
         null_ls.builtins.formatting.djhtml,
 
 
+        null_ls.builtins.formatting.gofmt,
+        null_ls.builtins.formatting.goimports,
+        null_ls.builtins.formatting.goimports_reviser,
+        null_ls.builtins.formatting.golines,
+
+
+
         null_ls.builtins.formatting.eslint_d.with { filetypes = {
             "typescript",
             "javascript",

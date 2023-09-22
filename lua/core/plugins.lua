@@ -102,5 +102,17 @@ require("lazy").setup({
 
     {'nvie/vim-flake8'},
 
+    { "lukas-reineke/indent-blankline.nvim" },
+
+    {"folke/todo-comments.nvim", dependencies = { "nvim-lua/plenary.nvim" },
+      opts = {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      },
+
+    { "elentok/format-on-save.nvim" },
+}
+
 }
 })

@@ -16,7 +16,17 @@ lspconfig.pyright.setup {
 lspconfig.tsserver.setup {}
 lspconfig.prismals.setup {}
 -- lspconfig.spectral.setup {}
-lspconfig.golangci_lint_ls.setup {}
+lspconfig.gopls.setup({
+    settings= {
+        gopls = {
+            analyses = {
+                unusedparams = true,
+            },
+            staticcheck = true,
+            gofumpt = true,
+        }
+    }
+})
 lspconfig.rust_analyzer.setup {
   settings = {
     ['rust-analyzer'] = {
