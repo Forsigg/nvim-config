@@ -14,7 +14,7 @@ wk.register({
     w = {"Save"},
     t = {name = "Terminal", f = {"Float terminal"}, h = {"Horizontal terminal"}},
     h = {"No highlight"},
-    g = {name = "Git", b = "Branches", c = "Commits", s = "Status"},
+    g = {name = "Git", b = "Branches", c = "Commits", s = "Status", l = "Lazygit"},
     c = {name = "Comment", l = "Comment Line"},
     l = {
         name = "LSP",

@@ -75,6 +75,7 @@ require("lazy").setup({
     {'nvim-lualine/lualine.nvim',
         dependencies = {
             'nvim-tree/nvim-web-devicons', 'linrongbin16/lsp-progress.nvim'
+    	}
     },
 
     { "folke/which-key.nvim" },
@@ -107,7 +108,15 @@ require("lazy").setup({
     { "folke/todo-comments.nvim", dependencies = { "nvim-lua/plenary.nvim" }, opts = {} },
 
     { "elentok/format-on-save.nvim" },
-}
 
-}
+    { 
+        "ThePrimeagen/refactoring.nvim",
+        dependencies = {
+          "nvim-lua/plenary.nvim",
+          "nvim-treesitter/nvim-treesitter",
+        },
+        config = function()
+          require("refactoring").setup()
+        end,
+    },
 })
