@@ -40,6 +40,10 @@ vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.smartindent = true
 
+-- Folding Settings
+vim.opt.foldmethod = "indent"
+vim.opt.foldenable = false
+
 -- Fillchars
 vim.opt.fillchars = {
     vert = "│",
