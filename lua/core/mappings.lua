@@ -31,7 +31,24 @@ vim.keymap.set('n', '<s-Tab>', ':BufferLineCyclePrev<CR>')
 vim.keymap.set('n', '<leader>tf', ':ToggleTerm direction=float<CR>')
 vim.keymap.set('n', '<leader>th', ':ToggleTerm direction=horizontal<CR>')
 vim.keymap.set('n', '<leader>tv', ':ToggleTerm direction=vertical size=40<CR>')
-vim.keymap.set('n', '<leader>gl', ':TermExec cmd="lazygit" direction=float<CR>')
+vim.keymap.set('n', '<leader>mu', ':TermExec cmd="make up" direction=float<CR>')
+vim.keymap.set('n', '<leader>md', ':TermExec cmd="make down" direction=float<CR>')
+vim.keymap.set('n', '<leader>mp', ':TermExec cmd="make prune" direction=float<CR>')
+vim.keymap.set('n', '<leader>mba', ':TermExec cmd="make build/airflow" direction=float<CR>')
+vim.keymap.set('n', '<leader>mbp', ':TermExec cmd="make build/parsers/base" direction=float<CR>')
+vim.keymap.set('n', '<leader>mbj', ':TermExec cmd="make build/joiners" direction=float<CR>')
+vim.keymap.set('n', '<leader>mbo', ':TermExec cmd="make build/operators" direction=float<CR>')
+vim.keymap.set('n', '<leader>mbx', ':TermExec cmd="make build/xporters/couch" direction=float<CR>')
+vim.keymap.set('n', '<leader>mbc', ':TermExec cmd="make build/crawlers" direction=float<CR>')
+vim.keymap.set('n', '<leader>mbe', ':TermExec cmd="make build/expert_filters" direction=float<CR>')
+vim.keymap.set('n', '<leader>mbt', ':TermExec cmd="make build/tests" direction=float<CR>')
+-- vim.keymap.set('n', '<leader>gl', ':TermExec cmd="lazygit" direction=float<CR>')
+
+
+-- Docker
+vim.keymap.set('n', '<leader>dil', ':! docker image ls<CR>')
+vim.keymap.set('n', '<leader>dbb', ':TermExec cmd="docker build ." direction=float<CR>')
+vim.keymap.set('n', '<leader>dp', ':! docker ps<CR>')
 
 -- Refactoring
 

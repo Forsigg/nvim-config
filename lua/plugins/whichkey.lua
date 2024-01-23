@@ -24,5 +24,43 @@ wk.register({
         r = "Rename",
         a = "Action",
         s = "Symbol"
+    },
+    m = {
+        name = "Make commands",
+        u = "make up",
+        d = "make down",
+        p = "make prune",
+        c = "make check airflow",
+        t = {
+            name = "make pytest",
+            p = "test parsers",
+            j = "test joiners",
+            o = "test operarors",
+            c = "test crawlers",
+            e = "test expert filters"
+        },
+        b = {
+            name = "make build",
+            a = "build airflow",
+            p = "build parsers base",
+            j = "build joiners",
+            o = "build operarors",
+            x = "build couch xporter",
+            c = "build crawlers",
+            e = "build expert filters",
+            t = "build tests"
+        }
+    },
+    d = {
+        name = "Docker",
+        p = "docker ps",
+        i = {
+            name = "Images",
+            l = "ls"
+        },
+        b = {
+            name = "Build",
+            b = "docker build ."
+        }
     }
 }, {prefix = "<leader>"})

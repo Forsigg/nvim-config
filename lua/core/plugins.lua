@@ -12,9 +12,11 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	{ 'phaazon/hop.nvim' },
-	
-    -- File view like IDE
+	-- { 'phaazon/hop.nvim' },
+
+    {dir='/home/aberkhmiller/code/lua/daily_symbols_count.nvim' },
+
+   -- File view like IDE
 	{
 	  'nvim-neo-tree/neo-tree.nvim',
 	  branch = 'v2.x',
@@ -41,9 +43,13 @@ require("lazy").setup({
     -- CMP plugins
     { 'hrsh7th/nvim-cmp' },
     { 'hrsh7th/cmp-nvim-lsp' },
+    { 'hrsh7th/cmp-nvim-lua' },
     { 'hrsh7th/cmp-buffer' },
     { 'hrsh7th/cmp-path'},
     { 'hrsh7th/cmp-cmdline' },
+    { 'hrsh7th/vim-vsnip' },
+    { 'hrsh7th/vim-vsnip-integ' },
+
 
 
     -- Plugin for find files and words

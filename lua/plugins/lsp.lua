@@ -4,11 +4,31 @@ lspconfig.pyright.setup {
     settings = {
         python = {
             analysis = {
-                autoSearchPaths = true,
-                autoImportCompletions = true,
+                autoSearchPaths = true, autoImportCompletions = true,
                 diagnosticMode = 'openFilesOnly',
                 typeCheckingMode = 'basic',
                 useLibraryCodeForTypes = true,
+            }
+        }
+    }
+}
+lspconfig.lua_ls.setup {
+    settings = {
+        Lua = {
+            runtime = {
+                -- Tell the language server which version of Lua you're using
+                -- (most likely LuaJIT in the case of Neovim)
+                version = 'LuaJIT'
+            },
+            diagnostics = {
+                globals = {
+                    'vim',
+                    'require'
+                },
+            },
+            -- Make the server aware of Neovim runtime files
+            workspace = {
+                library = vim.api.nvim_get_runtime_file("", true),
             }
         }
     }

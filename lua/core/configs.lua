@@ -21,7 +21,7 @@ vim.opt.mousefocus = true
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.colorcolumn = "120"
-vim.opt.list = true
+vim.opt.list = false
 
 -- Splits
 vim.opt.splitbelow = true
