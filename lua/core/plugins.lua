@@ -14,8 +14,8 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	-- { 'phaazon/hop.nvim' },
 
-    {dir='/home/aberkhmiller/code/lua/daily_symbols_count.nvim' },
 
+    { "nvim-lua/plenary.nvim" },
    -- File view like IDE
 	{
 	  'nvim-neo-tree/neo-tree.nvim',
@@ -115,7 +115,7 @@ require("lazy").setup({
 
     { "elentok/format-on-save.nvim" },
 
-    { 
+    {
         "ThePrimeagen/refactoring.nvim",
         dependencies = {
           "nvim-lua/plenary.nvim",
@@ -125,4 +125,7 @@ require("lazy").setup({
           require("refactoring").setup()
         end,
     },
+
+    -- My custom plugins
+    { 'forsigg/daily-symbols-count.nvim' },
 })

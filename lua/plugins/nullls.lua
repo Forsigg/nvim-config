@@ -11,16 +11,16 @@ null_ls.setup({
 
 
         -- JSON
-        null_ls.builtins.formatting.dprint.with {
-            filetypes = {"json", "markdown", "toml"}
-        },
+        -- null_ls.builtins.formatting.dprint.with {
+        --     filetypes = {"json", "markdown", "toml"}
+        -- },
 
         -- Python
         null_ls.builtins.diagnostics.flake8.with ({
             prefer_local = '.venv/bin',
         }),
         null_ls.builtins.formatting.autopep8,
-        null_ls.builtins.formatting.black.with { 
+        null_ls.builtins.formatting.black.with {
             filetypes = {'python'},
             args = {'--line-length', '120'} },
         null_ls.builtins.formatting.djhtml,

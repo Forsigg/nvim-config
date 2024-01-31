@@ -1,5 +1,3 @@
-local daily_symbols = require('daily_symbols_count')
+local daily_symbols = require('daily-symbols-count')
 
-daily_symbols.setup({
-    -- stat_file_path = "/home/aberkhmiller"
-})
+daily_symbols.setup({})

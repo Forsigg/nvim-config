@@ -23,7 +23,13 @@ wk.register({
         f = "Format",
         r = "Rename",
         a = "Action",
-        s = "Symbol"
+        s = "Symbol",
+        x = {
+            name = "Extract",
+            v = "Extract Var",
+            b = "Extract Block to func",
+            f = "Extract visual code to func"
+        }
     },
     m = {
         name = "Make commands",
