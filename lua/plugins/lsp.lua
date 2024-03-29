@@ -8,10 +8,6 @@ lspconfig.pyright.setup {
                 diagnosticMode = 'openFilesOnly',
                 typeCheckingMode = 'basic',
                 useLibraryCodeForTypes = true,
-                extraPaths = {
-                    "/home/aberkhmiller/code/etlsrc/parsers/basev2/sdk",
-                    "/home/aberkhmiller/code/etlsrc/airflow/src"
-                },
             }
         }
     }
