@@ -47,10 +47,10 @@ require("lazy").setup({
     { 'hrsh7th/cmp-buffer' },
     { 'hrsh7th/cmp-path'},
     { 'hrsh7th/cmp-cmdline' },
-    { 'hrsh7th/vim-vsnip' },
-    { 'hrsh7th/vim-vsnip-integ' },
 
-
+    { 'saadparwaiz1/cmp_luasnip' },
+    -- { 'hrsh7th/vim-vsnip' },
+    -- { 'hrsh7th/vim-vsnip-integ' },
 
     -- Plugin for find files and words
     { 'nvim-telescope/telescope.nvim', tag = '0.1.2', dependencies = {'nvim-lua/plenary.nvim'} },
@@ -111,9 +111,15 @@ require("lazy").setup({
 
     { "lukas-reineke/indent-blankline.nvim" , main = "ibl", opts = {} },
 
-    { "folke/todo-comments.nvim", dependencies = { "nvim-lua/plenary.nvim" }, opts = {} },
+    { "folke/todo-comments.nvim", dependencies = { "nvim-lua/plenary.nvim" }, opts = { highlight = { comments_only = false } } },
 
     { "elentok/format-on-save.nvim" },
+
+    -- Debugger
+    { 'rcarriga/nvim-dap-ui' , dependencies = { 'mfussenegger/nvim-dap', 'nvim-neotest/nvim-nio' } },
+
+    -- DAP Python
+    { 'mfussenegger/nvim-dap-python' },
 
     {
         "ThePrimeagen/refactoring.nvim",
@@ -125,6 +131,19 @@ require("lazy").setup({
           require("refactoring").setup()
         end,
     },
+
+    -- Color git conflicts
+    { 'akinsho/git-conflict.nvim', version = '*', config = true },
+
+    -- Snippet engine
+    { 'L3MON4D3/LuaSnip', version = 'v2', build = 'make install_jsregexp' , dependencies = {
+        'rafamadriz/friendly-snippets'
+    }},
+
+    { 'onsails/lspkind.nvim' },
+
+    -- Docs generator
+    { 'kkoomen/vim-doge', run = ':call doge#install()' },
 
     -- My custom plugins
     { 'forsigg/daily-symbols-count.nvim' },

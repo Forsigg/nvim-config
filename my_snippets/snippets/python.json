@@ -1,0 +1,11 @@
+{
+    "PythonScriptEntrypoint": {
+        "prefix": ["ifname", "if __name__"],
+        "body": [
+            "if __name__ == '__main__':",
+            "    main()"
+        ],
+        "description": "Insert entrypoint for Python script",
+        "scope": "python"
+    }
+}

@@ -5,6 +5,7 @@ null_ls.setup({
     log_level = 'info',
     sources = {
         null_ls.builtins.code_actions.gitsigns,
+        null_ls.builtins.completion.luasnip,
         null_ls.builtins.code_actions.refactoring.with {
             filetypes = { "go", "javascript", "lua", "python", "typescript" }
         },

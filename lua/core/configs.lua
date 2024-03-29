@@ -58,3 +58,15 @@ vim.opt.fillchars = {
 
 vim.cmd([[highlight clear LineNr]])
 vim.cmd([[highlight clear SignColumn]])
+
+-- Resolve missing line numbers error
+vim.api.nvim_create_autocmd(
+    "BufEnter",
+    {
+        pattern = "*",
+        callback = function()
+            vim.opt_local.relativenumber = true
+            vim.opt_local.number = true
+        end
+    }
+)

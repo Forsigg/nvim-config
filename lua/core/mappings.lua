@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 
 -- Neotree
-vim.keymap.set('n', '<leader>e', ':Neotree float focus<CR>')
+vim.keymap.set('n', '<leader>e', ':Neotree float focus reveal<CR>')
 vim.keymap.set('n', '<leader>o', ':Neotree float git_status<CR>')
 
 -- Navigation
@@ -46,9 +46,14 @@ vim.keymap.set('n', '<leader>mbt', ':TermExec cmd="make build/tests" direction=f
 
 
 -- Docker
-vim.keymap.set('n', '<leader>dil', ':! docker image ls<CR>')
-vim.keymap.set('n', '<leader>dbb', ':TermExec cmd="docker build ." direction=float<CR>')
-vim.keymap.set('n', '<leader>dp', ':! docker ps<CR>')
+-- vim.keymap.set('n', '<leader>dil', ':! docker image ls<CR>')
+-- vim.keymap.set('n', '<leader>dbb', ':TermExec cmd="docker build ." direction=float<CR>')
+-- vim.keymap.set('n', '<leader>dp', ':! docker ps<CR>')
+
+-- Debugger
+vim.keymap.set('n', '<leader>dt', ':lua require("dapui").toggle()<CR>')
+vim.keymap.set('n', '<leader>db', ':lua require("dap").toggle_breakpoint()<CR>')
+
 
 -- Refactoring
 
@@ -59,3 +64,16 @@ vim.keymap.set("x", "<leader>lxv", ":Refactor extract_var ")
 -- vim.keymap.set({ "n", "x" }, "<leader>ri", ":Refactor inline_var")
 -- vim.keymap.set( "n", "<leader>rI", ":Refactor inline_func")
 -- vim.keymap.set("n", "<leader>rbf", ":Refactor extract_block_to_file")
+
+
+-- Docs generate
+-- Generate comment for current line
+vim.keymap.set('n', '<Leader>d', '<Plug>(doge-generate)')
+
+-- Interactive mode comment todo-jumping
+-- vim.keymap.set('n', '<TAB>', '<Plug>(doge-comment-jump-forward)')
+-- vim.keymap.set('n', '<S-TAB>', '<Plug>(doge-comment-jump-backward)')
+-- vim.keymap.set('i', '<TAB>', '<Plug>(doge-comment-jump-forward)')
+-- vim.keymap.set('i', '<S-TAB>', '<Plug>(doge-comment-jump-backward)')
+-- vim.keymap.set('x', '<TAB>', '<Plug>(doge-comment-jump-forward)')
+-- vim.keymap.set('x', '<S-TAB>', '<Plug>(doge-comment-jump-backward)')

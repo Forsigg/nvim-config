@@ -1,7 +1,7 @@
 require'nvim-treesitter.install'.prefer_git = true 
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = { 
-      'typescript', 'lua', 'go', 'tsx',
+  ensure_installed = {
+      'typescript', 'lua', 'go', 'tsx', 
       'javascript', 'python', 'yaml', 'bash',
       'regex', 'html', 'json', 'make',
       'diff'
@@ -9,6 +9,9 @@ require'nvim-treesitter.configs'.setup {
 
   sync_install = false,
   auto_install = true,
+  indent = {
+    enable = true
+  },
   highlight = {
     enable = true,
   },

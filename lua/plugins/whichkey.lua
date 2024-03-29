@@ -57,16 +57,17 @@ wk.register({
             t = "build tests"
         }
     },
-    d = {
-        name = "Docker",
-        p = "docker ps",
-        i = {
-            name = "Images",
-            l = "ls"
-        },
-        b = {
-            name = "Build",
-            b = "docker build ."
-        }
-    }
+    d = 'Docs generate',
+    -- d = {
+    --     name = "Docker",
+    --     p = "docker ps",
+    --     i = {
+    --         name = "Images",
+    --         l = "ls"
+    --     },
+    --     b = {
+    --         name = "Build",
+    --         b = "docker build ."
+    --     }
+    -- }
 }, {prefix = "<leader>"})
