@@ -1,5 +1,3 @@
-local daily_symbols = require('daily-symbols-count')
-
 local function default_header()
     return {
         '', '', '',

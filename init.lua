@@ -35,3 +35,8 @@ require('plugins.dap-python')
 require('plugins.git_conflict')
 require('plugins.vim-doge')
 require('plugins.luasnip')
+require('plugins.codesnap')
+require('plugins.inlay-hints')
+
+
+-- require('plugins.tabnine')
