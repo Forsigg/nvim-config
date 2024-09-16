@@ -1,5 +1,5 @@
--- vim.wo.number = true
--- vim.wo.relativenumber = true
+vim.wo.number = true
+vim.wo.relativenumber = true
 
 vim.g.did_load_filetypes = 1
 vim.g.formatoptions = "qrn1"
@@ -59,23 +59,6 @@ vim.opt.fillchars = {
 vim.cmd([[highlight clear LineNr]])
 vim.cmd([[highlight clear SignColumn]])
 
--- Resolve missing line numbers error
-vim.api.nvim_create_autocmd(
-  "BufEnter",
-  {
-    pattern = "*",
-    callback = function()
-      if vim.bo.filetype == "dashboad" then
-        vim.opt_local.relativenumber = false
-        vim.opt_local.number = false
-        return
-      end
-      vim.opt_local.relativenumber = true
-      vim.opt_local.number = true
-    end
-  }
-)
-
 -- Auto set indent by filetype
 vim.api.nvim_create_autocmd(
   "BufEnter",
@@ -83,21 +66,11 @@ vim.api.nvim_create_autocmd(
     pattern = "*",
     callback = function()
       local filetype = vim.bo.filetype
-      if filetype == "dashboad" then
-        vim.opt.shiftwidth = 0
-        vim.opt.tabstop = 0
-        vim.opt.softtabstop = 0
-        vim.opt.smartindent = false
-        vim.opt.expandtab = false
-        vim.wo.number = false
-        vim.wo.relativenumber = false
-        return
-      end
 
       vim.wo.number = true
       vim.wo.relativenumber = true
 
-      if filetype == "python" or filetype == "go" then
+      if filetype == "python" or filetype == "go" or filetype == "rust" then
         vim.opt.shiftwidth = 4
         vim.opt.tabstop = 4
         vim.opt.softtabstop = 4

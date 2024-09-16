@@ -3,6 +3,7 @@ require('core.plugins')
 require('core.mappings')
 require('core.colors')
 require('core.configs')
+require('core.commands')
 
 
 -- Plugins
@@ -18,7 +19,7 @@ require('plugins.nullls')
 require('plugins.bufferline')
 require('plugins.autopairs')
 require('plugins.comments')
-require('plugins.dashboard')
+require('plugins.dashboard_plugin')
 require('plugins.gitsigns')
 require('plugins.lualine')
 require('plugins.whichkey')
@@ -37,6 +38,5 @@ require('plugins.vim-doge')
 require('plugins.luasnip')
 require('plugins.codesnap')
 require('plugins.inlay-hints')
-
-
--- require('plugins.tabnine')
+require('plugins.gitlab')
+require('plugins.noice')
